@@ -20,10 +20,10 @@ this program.  If not, see <http://www.gnu.org/licenses/>.
 bl_info = {
   'name': 'Toggle Silhouette',
   'author': 'Trentin Frederick (proxe)',
-  'version': (0, 2, 5),
+  'version': (0, 2, 6),
   'blender': (2, 75, 0),
   'location': '3D View \N{Rightwards Arrow} Properties Shelf \N{Rightwards Arrow} Shading',
-  'description': 'Quickly toggle the viewport settings to display silhouettes.',
+  'description': 'Quickly toggle the viewport into a silhouette mode.',
   # 'wiki_url': '',
   # 'tracker_url': '',
   'category': '3D View'
@@ -31,7 +31,9 @@ bl_info = {
 
 # imports
 import bpy
-from bpy.utils import register_module, unregister_module()
+from bpy.utils import register_module, unregister_module
+
+from .addon import preferences, properties, interface
 
 
 def register():
