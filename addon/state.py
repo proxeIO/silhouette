@@ -24,8 +24,8 @@ def toggle_silhouette(self, context):
 
     for i in range(0, 2):
 
-      light[i].diffuse_color = (0, 0, 0)
-      light[i].specular_color = (0, 0, 0)
+      light[i].diffuse_color = (0.0, 0.0, 0.0)
+      light[i].specular_color = (0.0, 0.0, 0.0)
 
     gradient.show_grad = False
-    gradient.high_gradient = (1, 1, 1)
+    gradient.high_gradient = addon.background_color
