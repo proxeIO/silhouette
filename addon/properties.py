@@ -1,8 +1,18 @@
 import bpy
+
 from bpy.types import PropertyGroup
 from bpy.props import BoolProperty, FloatVectorProperty
 
+from . import state
+
 class toggle_silhouette(PropertyGroup):
+
+  toggle = BoolProperty(
+    name = 'Toggle Silhouette',
+    description = 'Change the viewport state to display silhouettes.',
+    update = state.toggle_silhouette(self, context)
+    default = False
+  )
 
   first_light_diffuse = FloatVectorProperty(
     name = 'First Light Diffuse',
