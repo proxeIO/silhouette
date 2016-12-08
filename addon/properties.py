@@ -80,9 +80,15 @@ class toggle_silhouette(PropertyGroup):
     default = bpy.context.user_preferences.themes['Default'].view_3d.space.gradients.high_gradient
   )
 
-  using matcap = BoolProperty(
+  using_matcap = BoolProperty(
     name = 'Using matcap',
-    description = 'Storage for the state of the matcap toggle.'
+    description = 'Storage for the state of the matcap toggle.',
+    default = False
+  )
+
+  using_ambient_occlusion = BoolProperty(
+    name = 'Using Ambient Occlusion',
+    description = 'Storage for the state of the ambient occlusion toggle.',
     default = False
   )
 
