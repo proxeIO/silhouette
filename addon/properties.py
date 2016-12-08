@@ -5,10 +5,10 @@ from bpy.props import BoolProperty, FloatVectorProperty
 
 from . import state
 
-class silhouette(PropertyGroup):
+class toggle_silhouette(PropertyGroup):
 
-  toggle = BoolProperty(
-    name = 'Toggle Silhouette',
+  show_silhouette = BoolProperty(
+    name = 'Silhouette',
     description = 'Change the viewport state to display silhouettes.',
     update = state.toggle_silhouette(self, context)
     default = False
@@ -77,7 +77,7 @@ class silhouette(PropertyGroup):
   using_gradient = BoolProperty(
     name = 'Using Gradient',
     description = 'Storage for the state of the user preferences theme use gradient option for the 3D view.'
-    default = False
+    default = bpy.context.user_preferences.themes['Default'].view_3d.space.gradients.show_grad
   )
 
   gradient = FloatVectorProperty(
