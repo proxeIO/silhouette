@@ -20,7 +20,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.
 bl_info = {
   'name': 'Silhouette',
   'author': 'Trentin Frederick (proxe)',
-  'version': (0, 5, 12),
+  'version': (0, 5, 13),
   'blender': (2, 76, 0),
   'location': '3D View \N{Rightwards Arrow} Properties Shelf \N{Rightwards Arrow} Shading',
   'description': 'Quickly toggle the viewport into a silhouette mode.',
