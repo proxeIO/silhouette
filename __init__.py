@@ -1,6 +1,6 @@
 
 '''
-Toggle Silhouette Addon
+Silhouette Addon
 Copyright (c) 2016 Trentin Frederick (proxe) All Rights Reserved.
 
 This program is free software: you can redistribute it and/or modify it under
@@ -20,7 +20,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.
 bl_info = {
   'name': 'Silhouette',
   'author': 'Trentin Frederick (proxe)',
-  'version': (0, 5, 13),
+  'version': (0, 5, 14),
   'blender': (2, 76, 0),
   'location': '3D View \N{Rightwards Arrow} Properties Shelf \N{Rightwards Arrow} Shading',
   'description': 'Quickly toggle the viewport into a silhouette mode.',
