@@ -5,7 +5,7 @@ from bpy.props import FloatVectorProperty
 
 from .config import defaults
 
-class toggle_silhouette(AddonPreferences):
+class silhouette(AddonPreferences):
 
   bl_idname = __name__.partition('.')[0]
 

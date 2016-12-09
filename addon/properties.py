@@ -5,7 +5,7 @@ from bpy.props import BoolProperty, FloatVectorProperty
 
 from . import state
 
-class toggle_silhouette(PropertyGroup):
+class silhouette(PropertyGroup):
 
   show_silhouette = BoolProperty(
     name = 'Silhouette',
