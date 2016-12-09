@@ -1,9 +1,13 @@
 import bpy
+
 from bpy.types import AddonPreferences
+from bpy.props import FloatVectorProperty
 
 from .config import defaults
 
 class toggle_silhouette(AddonPreferences):
+
+  bl_idname = __name__.partition('.')[0]
 
   default = defaults
 
@@ -16,3 +20,9 @@ class toggle_silhouette(AddonPreferences):
     max = 1.0,
     default = default['background_color']
   )
+
+  def draw(self, context):
+
+    layout = self.layout
+
+    layout.prop(self, 'background_color')

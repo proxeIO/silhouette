@@ -10,7 +10,7 @@ class toggle_silhouette(PropertyGroup):
   show_silhouette = BoolProperty(
     name = 'Silhouette',
     description = 'Display silhouette.',
-    update = state.silhouette(self, context)
+    update = state.silhouette,
     default = False
   )
 
@@ -76,7 +76,7 @@ class toggle_silhouette(PropertyGroup):
 
   using_gradient = BoolProperty(
     name = 'Using Gradient',
-    description = 'Storage for the state of the user preferences theme use gradient option for the 3D view.'
+    description = 'Storage for the state of the user preferences theme use gradient option for the 3D view.',
     default = bpy.context.user_preferences.themes['Default'].view_3d.space.gradients.show_grad
   )
 
@@ -84,7 +84,7 @@ class toggle_silhouette(PropertyGroup):
     name = 'Gradient',
     description = 'The user\'s original gradient color value for the background in the user preferences.',
     subtype = 'COLOR',
-    size = 3
+    size = 3,
     min = 0.0,
     max = 1.0,
     default = bpy.context.user_preferences.themes['Default'].view_3d.space.gradients.high_gradient
@@ -93,12 +93,6 @@ class toggle_silhouette(PropertyGroup):
   using_matcap = BoolProperty(
     name = 'Using matcap',
     description = 'Storage for the state of the matcap toggle.',
-    default = False
-  )
-
-  using_ambient_occlusion = BoolProperty(
-    name = 'Using Ambient Occlusion',
-    description = 'Storage for the state of the ambient occlusion toggle.',
     default = False
   )
 

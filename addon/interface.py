@@ -1,6 +1,8 @@
 
 def toggle(self, context):
 
-  layout = self.layout
+  if context.space_data.viewport_shade in {'SOLID'} or context.scene.silhouette.show_silhouette:
 
-  layout.prop(context.scene.silhouette, 'show_silhouette')
+    layout = self.layout
+
+    layout.prop(context.scene.silhouette, 'show_silhouette')

@@ -20,7 +20,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.
 bl_info = {
   'name': 'Toggle Silhouette',
   'author': 'Trentin Frederick (proxe)',
-  'version': (0, 4, 10),
+  'version': (0, 5, 11),
   'blender': (2, 76, 0),
   'location': '3D View \N{Rightwards Arrow} Properties Shelf \N{Rightwards Arrow} Shading',
   'description': 'Quickly toggle the viewport into a silhouette mode.',
@@ -32,6 +32,8 @@ bl_info = {
 
 # imports
 import bpy
+
+from bpy.props import PointerProperty
 from bpy.utils import register_module, unregister_module
 
 from .addon import preferences, properties, interface
@@ -42,17 +44,17 @@ def register():
   register_module(__name__)
 
   bpy.types.Scene.silhouette = PointerProperty(
-    type = properties.silhouette
+    type = properties.toggle_silhouette,
     name = 'Silhouette Addon',
     description = 'Storage location for silhouette addon.',
   )
 
-  bpy.types.VIEW3D_PT_view3d_shading.append(interface.silhouette)
+  bpy.types.VIEW3D_PT_view3d_shading.append(interface.toggle)
 
 
 def unregister():
 
-  bpy.types.VIEW3D_PT_view3d_shading.remove(interface.silhouette)
+  bpy.types.VIEW3D_PT_view3d_shading.remove(interface.toggle)
 
   del bpy.types.Scene.silhouette
 
