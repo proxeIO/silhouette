@@ -1,3 +1,3 @@
 defaults = {
-  'background_color': (1.0, 1.0, 1.0)
+  'background_color': (0.8, 0.8, 0.8)
 }

@@ -9,7 +9,7 @@ class toggle_silhouette(AddonPreferences):
 
   background_color = FloatVectorProperty(
     name = 'Background Color',
-    description = 'The background color to use when displying silhouettes.',
+    description = 'The background color to use when displaying silhouettes.',
     subtype = 'COLOR',
     size = 3,
     min = 0.0,

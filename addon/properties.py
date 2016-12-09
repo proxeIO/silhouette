@@ -9,8 +9,8 @@ class toggle_silhouette(PropertyGroup):
 
   show_silhouette = BoolProperty(
     name = 'Silhouette',
-    description = 'Change the viewport state to display silhouettes.',
-    update = state.toggle_silhouette(self, context)
+    description = 'Display silhouette.',
+    update = state.silhouette(self, context)
     default = False
   )
 
