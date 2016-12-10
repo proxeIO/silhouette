@@ -1,8 +1,6 @@
 
 def toggle(self, context):
 
-  addon = context.user_preferences.addons[__name__.partition('.')[0]].preferences
-
   if context.space_data.viewport_shade == 'SOLID' or context.scene.silhouette.show_silhouette:
 
     layout = self.layout
@@ -11,4 +9,4 @@ def toggle(self, context):
 
     if context.scene.silhouette.show_silhouette:
 
-      layout.prop(addon, 'background_color', text='')
+      layout.prop(context.user_preferences.themes['Default'].view_3d.space.gradients, 'high_gradient', text='')
