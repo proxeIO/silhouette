@@ -1,8 +1,4 @@
-
 '''
-Silhouette Addon
-Copyright (c) 2016 Trentin Frederick (proxe) All Rights Reserved.
-
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later
@@ -16,11 +12,10 @@ You should have received a copy of the GNU General Public License along with
 this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-# addon info
 bl_info = {
   'name': 'Silhouette',
   'author': 'Trentin Frederick (proxe)',
-  'version': (0, 5, 16),
+  'version': (0, 5, 17),
   'blender': (2, 76, 0),
   'location': '3D View \N{Rightwards Arrow} Properties Shelf \N{Rightwards Arrow} Shading',
   'description': 'Quickly toggle the viewport into a silhouette mode.',
@@ -30,7 +25,6 @@ bl_info = {
   'category': '3D View'
 }
 
-# imports
 import bpy
 
 from bpy.props import PointerProperty
