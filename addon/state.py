@@ -3,7 +3,7 @@ import bpy
 def silhouette(self, context):
 
     option = context.scene.silhouette
-    gradient = context.user_preferences.themes['Default'].view_3d.space.gradients
+    gradient = context.user_preferences.themes[0].view_3d.space.gradients
     light = context.user_preferences.system.solid_lights
     space_data = context.space_data
     addon = context.user_preferences.addons[__name__.partition('.')[0]].preferences
